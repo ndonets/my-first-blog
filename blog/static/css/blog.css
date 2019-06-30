@@ -1,12 +1,9 @@
 h1 a {
-    color: #DE561F;
+    color: ##1FC0DE;
+    font-family: 'Lobster';
 }
 body {
     padding-left: 15px;
-}
-h1 a {
-    color: #FCA205;
-    font-family: 'DM Serif Display';
 }
 .page-header {
     background-color: #ff9400;
