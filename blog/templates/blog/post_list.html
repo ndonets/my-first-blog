@@ -7,18 +7,22 @@
             <h1><a href="/">Natalia's blog</a></h1>
         </div>
 
-        <div>
-            <p>published: 30.06.2019, 12:14</p>
-            <h2><a href="">When Alexandria Ocasio-Cortez met Greta Thunberg: 'Hope is contagious't</a></h2>
-            <p>Thunberg, now 16, catapulted to fame last year for skipping school every Friday to stand outside the Swedish parliament, protesting against political inaction over the climate crisis and sparking an international movement, the school strike for climate, in which millions of other children followed suit. Ocasio-Cortez, the Democratic Representative for New York’s 14th congressional district is, at 29, the youngest woman ever to serve in Congress, whose election over a well-funded incumbent in 2018 was a huge upset to politics-as-usual. She has been in office for less than a year, which seems extraordinary given the amount of coverage she has generated. In February, Ocasio-Cortez submitted the Green New Deal to the US House of Representatives, calling for, among other things, the achievement of “net-zero” greenhouse gases within a decade and “a full transition off fossil fuels”, as well as retrofitting all buildings in the US to meet new energy efficient standards.</p>
-        </div>
+{% for post in posts %}
+      <div>
+            <p>published: 30.06.2019, 12:14 {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}When Alexandria Ocasio-Cortez met Greta Thunberg: 'Hope is contagious't</a></h2>
+            <p>{{ post.text|linebreaksbr }}Thunberg, now 16, catapulted to fame last year for skipping school every Friday to stand outside the Swedish parliament, protesting against political inaction over the climate crisis and sparking an international movement, the school strike for climate, in which millions of other children followed suit. Ocasio-Cortez, the Democratic Representative for New York’s 14th congressional district is, at 29, the youngest woman ever to serve in Congress, whose election over a well-funded incumbent in 2018 was a huge upset to politics-as-usual. She has been in office for less than a year, which seems extraordinary given the amount of coverage she has generated. In February, Ocasio-Cortez submitted the Green New Deal to the US House of Representatives, calling for, among other things, the achievement of “net-zero” greenhouse gases within a decade and “a full transition off fossil fuels”, as well as retrofitting all buildings in the US to meet new energy efficient standards.</p>
+</div>
+{% endfor %}
 
-        <div>
-            <p>published: 29.06.2019, 12:14</p>
-            <h2><a href="">Why culture’s ‘queerbaiting’ leaves me cold</a></h2>
-            <p>When Taylor Swift released her video for You Need to Calm Down, it was satirical news site the Onion that delivered the funniest and most poignant response: “Taylor Swift Inspires Teen To Come Out As Straight Woman Needing To Be At Center Of Gay Rights Narrative”.
+{% for post in posts %}
+<div>
+            <p>published: 29.06.2019, 12:14{{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}Why culture’s ‘queerbaiting’ leaves me cold</a></h2>
+            <p>{{ post.text|linebreaksbr }}When Taylor Swift released her video for You Need to Calm Down, it was satirical news site the Onion that delivered the funniest and most poignant response: “Taylor Swift Inspires Teen To Come Out As Straight Woman Needing To Be At Center Of Gay Rights Narrative”.
 
 The video, directed by Drew Kirsch and Swift herself, was designed to make a statement: it sees the musician parade around a campsite with a bunch of celebrity LGBTQ+ friends. There’s a same-sex wedding, a drag pageant and a food fight – a parade of out and proud behaviour provoking the video’s “redneck” protesters who hold placards with slogans such as “Adam and Eve not Adam and Steve”. With cameos from Ellen DeGeneres, Laverne Cox, Jonathan Van Ness, Adam Lambert, Billy Porter and the crew from Queer Eye, it certainly brings out all the LGBTQ+ big guns. But as you watch them cavort around fulfilling gay stereotypes (tea parties for the gays, forearm tattoos for the lesbians) in a nauseating set, you wonder why they agreed to it.</p>
-        </div>
+   </div>
+{% endfor %}
     </body>
 </html>
